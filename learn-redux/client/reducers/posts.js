@@ -6,16 +6,14 @@
 // We should not mutate state, ie functions should always be pure functions 
 // (given the same input should always produce the same output)
 // ie we should not mutate something outside the function
-// we do this by making a copy of the old state (array, object,etc), modify that, and return that copy
+// we do this by making a copy of the old state (array, object,etc), modifying that, and returning that copy
 
-// set state to empty array using es6 default parameters
-// as the first time function runs state won't be equal to anything
+// set state to empty array using ES6 default parameters as the first time function runs state won't be equal to anything
 function posts(state = [], action) {
     // need to use a switch statement because all the reducers run for each action
     switch (action.type) {
         case 'INCREMENT_LIKES':
         const i = action.index;
-            console.log("incrementing likes")
             // return the updated state
             return [
                 ...state.slice(0,i), //everything before the object at index we are updating
@@ -29,4 +27,5 @@ function posts(state = [], action) {
 }
 
 export default posts;
+
 

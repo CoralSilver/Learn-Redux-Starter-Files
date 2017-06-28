@@ -1,4 +1,5 @@
 // an action is just an object with some info about what happened and what needs to change
+// actually making the change is done through reducers
 
 // you cannot put async actions in your reducers
 // if you need support for async actions you can use something like: 
@@ -8,8 +9,8 @@
 // Utility to help working with JSON with deeply nested data:
 // https://github.com/paularmstrong/normalizr
 
-// increment number of likes
 
+// increment number of likes
 export function increment(index) {
     return {
         type: 'INCREMENT_LIKES',
@@ -19,7 +20,6 @@ export function increment(index) {
 
 // add comment
 export function addComment(postId, author, comment) {
-    console.log('Dispatching add comment')
     return {
         type: 'ADD_COMMENT',
         postId, 

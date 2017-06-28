@@ -1,5 +1,4 @@
 function postComments(state = [], action) {
-    debugger;
     switch (action.type) {
         case 'ADD_COMMENT':
             // return existing state with the new comment
